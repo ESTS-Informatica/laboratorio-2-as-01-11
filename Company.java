@@ -117,7 +117,13 @@ public class Company {
      * @return true If the request succeeds, false otherwise.
      */
     public boolean createSell(User client, User seller, Property property) {
-        return true;         // dummy implementation
+        if (client != null && clients.contains(client) && seller != null && sellers.contains(seller)) {
+            if (property != null && properties.contains(property)) {
+                registerSell(new Sell(client, seller, property));
+                return true;
+            }
+        }
+        return false;
     }
 
     /**

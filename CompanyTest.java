@@ -85,4 +85,11 @@ public class CompanyTest
     {
         assertEquals(false, company.registerClient(null));
     }
+    public void testCreateSale()
+    {
+        assertEquals(true, company.registerClient(client1));
+        assertEquals(true, company.registerSeller(seller1));
+        assertEquals(true, company.registerProperty(property1));
+        assertEquals(true, company.createSell(client1, seller1, property1));
+    }
 }
