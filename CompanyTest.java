@@ -63,4 +63,26 @@ public class CompanyTest
         assertNotNull(company.getSells());
 
     }
+    @Test
+    public void testRegisterClient()
+    {
+        assertEquals(true, company.registerClient(client1));
+    }
+    @Test
+    public void testRegisterClients()
+    {
+        assertEquals(true, company.registerClient(client1));
+        assertEquals(true, company.registerClient(client2));
+    }
+    @Test
+    public void testRegisterClientDuplicate()
+    {
+        assertEquals(true, company.registerClient(client1));
+        assertEquals(false, company.registerClient(client1));
+    }
+    @Test
+    public void testRegisterClientNull()
+    {
+        assertEquals(false, company.registerClient(null));
+    }
 }
