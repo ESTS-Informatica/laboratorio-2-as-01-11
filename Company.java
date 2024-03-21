@@ -24,16 +24,18 @@ public class Company {
      * Constructor of class Company
      */
     public Company() {
-
+        clients = new ArrayList<>();
+        sellers = new ArrayList<>();
+        properties = new ArrayList<>();
+        sells = new ArrayList<>();
     }
-
     /**
      * Get the list of clients.
      *
      * @return This company clients.
      */
     public List<User> getClients() {
-        return null;         // dummy implementation
+        return clients;         // dummy implementation
     }
 
     /**
@@ -42,7 +44,7 @@ public class Company {
      * @return This company sellers.
      */
     public List<User> getSellers() {
-        return null;         // dummy implementation
+        return sellers;         // dummy implementation
     }
 
     /**
@@ -51,7 +53,7 @@ public class Company {
      * @return This company's properties.
      */
     public List<Property> getProperties() {
-        return null;         // dummy implementation
+        return properties;         // dummy implementation
     }
 
     /**
@@ -60,7 +62,7 @@ public class Company {
      * @return This company sells.
      */
     public List<Sell> getSells() {
-        return null;         // dummy implementation
+        return sells;         // dummy implementation
     }
 
     /**
@@ -122,8 +124,9 @@ public class Company {
      * @return The total number of sells in the year.
      */
     public int calculateSellsOfTheYear(int year) {
-        return 0;         // dummy implementation
-    }
+        return 0;
+    }         // dummy implementation
+    
 
     /**
      * Find the seller with more sells within the provided year.
